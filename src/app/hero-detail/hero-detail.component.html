@@ -1,0 +1,21 @@
+<div *ngIf="hero" class="cards-container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar style="background: url({{hero.img}})center center / cover no-repeat;"></div>
+      <mat-card-title>{{hero.name | uppercase}}</mat-card-title>
+      <mat-card-subtitle>id: {{hero.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Имя героя:</mat-label>
+      <input matInput id="hero-name" [(ngModel)]="hero.name" placeholder="Имя">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Картинка героя:</mat-label>
+      <input matInput id="hero-img" [(ngModel)]="hero.img" placeholder="img url">
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" (click)="goBack()">назад</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

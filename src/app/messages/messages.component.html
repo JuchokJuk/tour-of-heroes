@@ -1,0 +1,18 @@
+<div *ngIf="messageService.messages.length">
+
+
+  <div class="in-line">
+    <h2>Сообщения</h2>
+
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon"
+      (click)="messageService.clear()">delete</mat-icon>
+  </div>
+
+
+  <mat-list>
+    <mat-list-item *ngFor="let message of messageService.messages">
+      {{message}}
+    </mat-list-item>
+  </mat-list>
+
+</div>
